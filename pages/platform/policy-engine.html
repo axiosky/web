@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Governor - Runtime AI governance platform that enforces policy before autonomous agents act. Deterministic decisions, millisecond latency, auditable controls.">
+    <meta name="og:title" content="Governor | Runtime AI Governance for Autonomous Agents">
+    <meta name="og:description" content="Real-time policy enforcement before agent actions reach production systems.">
+    <meta name="og:type" content="website">
+    <title>Policy Engine - Axiosky</title>
+     <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/policy-engine.css">
+
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="../../index.html">
+                    <img src="../../assets/images/logo.svg" alt="Axiosky Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <!-- Platform dropdown -->
+    <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle">Platform</a>
+        <ul class="dropdown-menu">
+            <li><a href="../../pages/platform/governor.html" class="dropdown-link">Governance</a></li>
+            <li><a href="../../pages/platform/orchestrator.html" class="dropdown-link">Orchestration</a></li>
+            <li><a href="../../pages/platform/policy-engine.html" class="dropdown-link">Policy Engine</a></li>
+            <li><a href="../../pages/platform/security.html" class="dropdown-link">Security</a></li>
+        </ul>
+    </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Solutions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../pages/solutions/government.html" class="dropdown-link">Government</a></li>
+                        <li><a href="../../pages/solutions/critical-infrastructure.html" class="dropdown-link">Compliance-Critical Infrastructure</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Company</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../pages/company/about.html" class="dropdown-link">About</a></li>
+                        <li><a href="../../pages/company/team.html" class="dropdown-link">Team</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="../../pages/request-pilot.html" class="nav-link nav-link-cta">Request Pilot</a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="policy-hero">
+        <div class="section-container">
+            <div class="eyebrow">Policy-as-Code Engine</div>
+            <h1 class="hero-headline">Turn Laws Into Enforceable Policy Code</h1>
+            <p class="hero-subheadline">The Policy Engine compiles regulations, internal controls, and operational procedures into deterministic, versioned, testable code that the Governor executes at every decision point.</p>
+            <p class="hero-paragraph">Compliance requirements exist in natural language — regulatory text, legal opinions, standard operating procedures, risk frameworks. Autonomous agents execute in code. The Policy Engine is the translation layer that converts human-readable policy into machine-enforceable rules, eliminating ambiguity and ensuring every agent action is evaluated against current, certified compliance logic.</p>
+            <div class="hero-ctas">
+                <button class="btn btn--primary btn--lg">Request Policy Assessment</button>
+                <button class="btn btn--secondary btn--lg">View Template Library</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- POLICY GAP SECTION -->
+    <section class="section-policy-gap">
+        <div class="section-container">
+            <h2 class="section-title">Why Prompts Are Not Policy</h2>
+            <p class="section-subtitle">Natural-language instructions to LLMs are non-deterministic, hard to test, and difficult to defend in regulated settings. Compliance requires certainty.</p>
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <div class="comparison-icon">💬</div>
+                    <h3 class="comparison-title">Prompt Engineering</h3>
+                    <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-16); line-height: var(--line-height-normal);">Add instructions to system prompts: "Always follow GDPR." "Require approval for large transactions."</p>
+                    <ul class="comparison-list">
+                        <li>Non-deterministic: same input → different outputs</li>
+                        <li>Hard to test at scale across edge cases</li>
+                        <li>Model drift with updates or temperature changes</li>
+                        <li>Limited auditability and traceability</li>
+                        <li>Vulnerable to prompt injection attacks</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">🔍</div>
+                    <h3 class="comparison-title">Semantic Guardrails</h3>
+                    <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-16); line-height: var(--line-height-normal);">ML models check outputs for policy violations via classifiers and confidence scoring.</p>
+                    <ul class="comparison-list">
+                        <li>Probabilistic, not deterministic (92% confident ≠ compliant)</li>
+                        <li>False positives and false negatives</li>
+                        <li>Limited expressiveness for complex rules</li>
+                        <li>Weak traceability to specific regulations</li>
+                        <li>Useful as detection layer, not sole control</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card highlighted">
+                    <div class="comparison-icon">⚖️</div>
+                    <h3 class="comparison-title">Policy-as-Code</h3>
+                    <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-16); line-height: var(--line-height-normal);">Translate regulations into deterministic, versioned code executed by the Governor.</p>
+                    <ul class="comparison-list">
+                        <li>Deterministic: identical input → identical decision</li>
+                        <li>Testable with comprehensive unit tests</li>
+                        <li>Verifiable by legal and compliance teams</li>
+                        <li>Auditable with full decision traceability</li>
+                        <li>Resistant to injection attacks</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="text-align: center; font-style: italic; color: var(--color-text-secondary); margin-top: var(--space-32);">Compliance is best expressed as testable logic, not fuzzy semantics. Policy-as-Code maps to that structure.</p>
+        </div>
+    </section>
+
+    <!-- POLICY PRINCIPLES SECTION -->
+    <section class="section-principles">
+        <div class="section-container">
+            <h2 class="section-title">Core Principles</h2>
+            <p class="section-subtitle">Policy-as-Code treats compliance like infrastructure — versioned, testable, deployable, and rollback-ready.</p>
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-number">1</div>
+                    <h3 class="principle-title">Code, Not Text</h3>
+                    <p class="principle-desc">Policies are written as executable logic, not ambiguous prose. Code is explicit — it computes one result for a given input.</p>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">2</div>
+                    <h3 class="principle-title">Version Controlled</h3>
+                    <p class="principle-desc">Every policy change is a commit. Full history of who changed what, why, and when — with the ability to revert quickly.</p>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">3</div>
+                    <h3 class="principle-title">Test-Driven</h3>
+                    <p class="principle-desc">Every rule has unit and regression tests covering normal cases, edge cases, and exception paths.</p>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">4</div>
+                    <h3 class="principle-title">Continuously Deployed</h3>
+                    <p class="principle-desc">Policy changes follow a release lifecycle: develop → test → stage → promote to production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEMPLATE LIBRARY SECTION -->
+    <section class="section-templates">
+        <div class="section-container">
+            <h2 class="section-title">Policy Template Library</h2>
+            <p class="section-subtitle">Accelerate deployment with configurable templates for common regulations and industry standards.</p>
+            <div class="template-grid">
+                <div class="template-card">
+                    <div class="template-category">Regulatory Compliance</div>
+                    <h3 class="template-title">GDPR</h3>
+                    <p class="template-description">Personal data access controls, consent management, data subject rights automation, cross-border transfer restrictions.</p>
+                    <ul class="template-features">
+                        <li>Articles 6, 9, 15–22, 44–50</li>
+                        <li>Automated decision-making oversight</li>
+                        <li>Configurable thresholds</li>
+                        <li>Test suite included</li>
+                    </ul>
+                    <div class="template-download">📦 Download Template</div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-category">Regulatory Compliance</div>
+                    <h3 class="template-title">SOX (Sarbanes-Oxley)</h3>
+                    <p class="template-description">Financial transaction approval matrices, segregation of duties enforcement, audit trail requirements.</p>
+                    <ul class="template-features">
+                        <li>Sections 302, 404, 802</li>
+                        <li>Financial data access controls</li>
+                        <li>Approval hierarchies</li>
+                        <li>Test suite included</li>
+                    </ul>
+                    <div class="template-download">📦 Download Template</div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-category">Regulatory Compliance</div>
+                    <h3 class="template-title">HIPAA</h3>
+                    <p class="template-description">PHI access controls, minimum necessary enforcement, patient consent verification, audit logging.</p>
+                    <ul class="template-features">
+                        <li>Privacy Rule §164.502</li>
+                        <li>Minimum necessary enforcement</li>
+                        <li>Consent verification workflows</li>
+                        <li>Test suite included</li>
+                    </ul>
+                    <div class="template-download">📦 Download Template</div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-category">Government Procurement</div>
+                    <h3 class="template-title">FAR (Federal Acquisition)</h3>
+                    <p class="template-description">Competitive bidding verification, sole-source justification, contract type rationale, conflict-of-interest checks.</p>
+                    <ul class="template-features">
+                        <li>FAR 6.102, 6.302, 15.304, 3.101</li>
+                        <li>Automated compliance verification</li>
+                        <li>Escalation workflows</li>
+                        <li>Test suite included</li>
+                    </ul>
+                    <div class="template-download">📦 Download Template</div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-category">Financial Services</div>
+                    <h3 class="template-title">AML / KYC</h3>
+                    <p class="template-description">Identity verification workflows, suspicious activity escalation, PEP & sanctions screening (OFAC).</p>
+                    <ul class="template-features">
+                        <li>31 CFR references</li>
+                        <li>OFAC/PEP screening integration</li>
+                        <li>Filing triggers and escalations</li>
+                        <li>Test suite included</li>
+                    </ul>
+                    <div class="template-download">📦 Download Template</div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-category">Operational Controls</div>
+                    <h3 class="template-title">Approval Hierarchies</h3>
+                    <p class="template-description">Amount-based approval matrices, multi-signature rules, time-bound authority, segregation of duties.</p>
+                    <ul class="template-features">
+                        <li>Customizable thresholds</li>
+                        <li>Role-based routing</li>
+                        <li>Escalation logic</li>
+                        <li>Test suite included</li>
+                    </ul>
+                    <div class="template-download">📦 Download Template</div>
+                </div>
+            </div>
+            <p style="text-align: center; font-style: italic; color: var(--color-text-secondary); margin-top: var(--space-32); font-size: var(--font-size-sm);">Templates are provided as-is. Verify with legal and compliance teams before enforcement.</p>
+        </div>
+    </section>
+
+    <!-- POLICY LIFECYCLE SECTION -->
+    <section class="section-lifecycle">
+        <div class="section-container">
+            <h2 class="section-title">Policy Lifecycle</h2>
+            <p class="section-subtitle">From development to production operation — policies are managed with the rigor of production software.</p>
+            <div class="lifecycle-timeline">
+                <div class="lifecycle-stage">
+                    <div class="lifecycle-number">1</div>
+                    <h3 class="lifecycle-title">Development</h3>
+                    <p class="lifecycle-desc">Extract requirements, design logic, write code and tests, validate in shadow mode.</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="lifecycle-number">2</div>
+                    <h3 class="lifecycle-title">Certification</h3>
+                    <p class="lifecycle-desc">Legal confirms mapping, compliance certifies completeness, audit validates tests.</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="lifecycle-number">3</div>
+                    <h3 class="lifecycle-title">Staged Deployment</h3>
+                    <p class="lifecycle-desc">Deploy to staging, validate in shadow mode, canary rollout to production.</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="lifecycle-number">4</div>
+                    <h3 class="lifecycle-title">Production</h3>
+                    <p class="lifecycle-desc">Policy enforces decisions in real-time with continuous monitoring and audit trails.</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="lifecycle-number">5</div>
+                    <h3 class="lifecycle-title">Monitoring</h3>
+                    <p class="lifecycle-desc">Review telemetry, identify false positives/negatives, tune thresholds iteratively.</p>
+                </div>
+                <div class="lifecycle-stage">
+                    <div class="lifecycle-number">6</div>
+                    <h3 class="lifecycle-title">Regulatory Updates</h3>
+                    <p class="lifecycle-desc">Track regulatory changes, impact analysis, update code, re-certify, re-deploy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="section-final-cta">
+        <div class="section-container">
+            <h2 class="section-title">Transform Compliance Into Code</h2>
+            <p class="section-subtitle">Work with our governance engineering team to translate your regulatory requirements into executable, auditable policy code.</p>
+            <div class="final-ctas">
+                <button class="btn btn--primary btn--lg">Request Policy Assessment</button>
+                <button class="btn btn--secondary btn--lg">Download Template Guide (PDF)</button>
+            </div>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--space-24); opacity: 0.9;">Policy assessments conducted under NDA. Assessment fee: $15,000 (applied toward first-year contract if you proceed).</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">Platform</h3>
+                <ul class="footer-links">
+                    <li><a href="governor.html">Governance</a></li>
+                    <li><a href="orchestrator.html">Orchestration</a></li>
+                    <li><a href="policy-engine.html">Policy Engine</a></li>
+                    <li><a href="security.html">Security</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Solutions</h3>
+                <ul class="footer-links">
+                    <li><a href="../../pages/solutions/government.html">Government</a></li>
+                    <li><a href="../../pages/solutions/critical-infrastructure.html">Compliance-Critical Infrastructure</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Company</h3>
+                <ul class="footer-links">
+                    <li><a href="../../pages/company/about.html">About</a></li>
+                    <li><a href="../../pages/company/team.html">Team</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-social">
+            <a href="#" class="social-link" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.91 6.75H2.556l7.73-8.835L1.75 2.25h6.76l4.694 6.207 5.384-6.207zM17.002 18.807h1.844L6.844 3.556H4.897l12.105 15.251z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0-3.403 2.759-6.162 6.162-6.162s6.162 2.759 6.162 6.162-2.759 6.162-6.162 6.162-6.162-2.759-6.162-6.162zm2.889 0c0 1.861 1.512 3.373 3.373 3.373s3.373-1.512 3.373-3.373-1.512-3.373-3.373-3.373-3.373 1.512-3.373 3.373zm11.294-6.468c0 .795.645 1.44 1.44 1.44s1.44-.645 1.44-1.44-.645-1.44-1.44-1.44-1.44.645-1.44 1.44z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+        </div>
+        
+        <div class="footer-legal">
+            <a href="../../pages/legal/privacy-policy.html">Privacy & Legal</a>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="footer-copyright">&copy; 2026 Axiosky</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/navigation.js"></script>
+</body>
+</html>

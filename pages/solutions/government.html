@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Orchestrate and govern autonomous agent fleets for government: audit-ready, sovereign deployment options, policy-as-code enforcement.">
+    <meta property="og:title" content="Government Solutions — Secure Agent Orchestration | Axiosky">
+    <meta property="og:description" content="Auditable, policy-enforced agent orchestration for government agencies. Sovereign deployment, immutable audit trails, human-in-loop governance.">
+    <meta property="og:type" content="website">
+    <title>Government Solutions - Axiosky</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/government.css">
+
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="../../index.html">
+                    <img src="../../assets/images/logo.svg" alt="Axiosky Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <!-- Platform dropdown -->
+    <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle">Platform</a>
+        <ul class="dropdown-menu">
+            <li><a href="../../pages/platform/governor.html" class="dropdown-link">Governance</a></li>
+            <li><a href="../../pages/platform/orchestrator.html" class="dropdown-link">Orchestration</a></li>
+            <li><a href="../../pages/platform/policy-engine.html" class="dropdown-link">Policy Engine</a></li>
+            <li><a href="../../pages/platform/security.html" class="dropdown-link">Security</a></li>
+        </ul>
+    </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Solutions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../pages/solutions/government.html" class="dropdown-link">Government</a></li>
+                        <li><a href="../../pages/solutions/critical-infrastructure.html" class="dropdown-link">Compliance-Critical Infrastructure</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Company</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../pages/company/about.html" class="dropdown-link">About</a></li>
+                        <li><a href="../../pages/company/team.html" class="dropdown-link">Team</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="../../pages/request-pilot.html" class="nav-link nav-link-cta">Request Pilot</a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="government-hero">
+        <div class="section-container">
+            <div class="eyebrow">Government Solutions</div>
+            <h1 class="hero-headline">Secure Agent Orchestration for Government</h1>
+            <p class="hero-subheadline">Mandatory policy enforcement, immutable audit trails, and sovereign deployment control for government agencies.</p>
+            <p class="hero-paragraph">Every agent action is evaluated by policy before execution. Decisions are recorded, replayable, and auditable. Deploy on-premises, in approved cloud regions, or air-gapped with full customer control over keys and data residency.</p>
+            <div class="hero-ctas">
+                <button class="btn btn--primary btn--lg">Request Architecture Consultation</button>
+                <button class="btn btn--secondary btn--lg">Download Government Brief (NDA)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEMS SECTION -->
+    <section class="section-problems">
+        <div class="section-container">
+            <h2 class="section-title">Why Governments Need Orchestration-First Approaches</h2>
+            <p class="section-subtitle">Standard agent deployments miss two critical government requirements: deterministic governance and sovereign control.</p>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">⚠️</div>
+                    <h3 class="problem-title">Governance Bypass Risk</h3>
+                    <p class="problem-desc">Agents act without policy evaluation. Audits find missing decision records. Controls are not enforced at the architecture level.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔓</div>
+                    <h3 class="problem-title">Data Residency & Sovereignty</h3>
+                    <p class="problem-desc">Uncontrolled egress to external services. No deployment options for on-premises or air-gapped environments. Customer keys not under control.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⏸️</div>
+                    <h3 class="problem-title">Long-Running Workflows</h3>
+                    <p class="problem-desc">Approvals can take days–weeks. Systems lack reliable pause/resume. Human-in-loop flows are manual and fragile.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📋</div>
+                    <h3 class="problem-title">Audit & Chain-of-Custody</h3>
+                    <p class="problem-desc">No complete decision trail. Hard to trace actions to specific policies. Forensic review is impossible without replayable decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURE SECTION -->
+    <section class="section-architecture">
+        <div class="section-container">
+            <h2 class="section-title">Architecture Overview</h2>
+            <p class="section-subtitle">Agents propose actions. Orchestrator coordinates. Governor evaluates policy. Only approved actions execute.</p>
+            <div class="architecture-flow">
+                <div class="flow-item">
+                    <div class="flow-badge">🤖</div>
+                    <div class="flow-content">
+                        <h4>Autonomous Agents</h4>
+                        <p>Propose actions. Cannot reach protected systems directly. All requests routed through Orchestrator.</p>
+                    </div>
+                </div>
+                <div class="flow-separator">↓</div>
+                <div class="flow-item">
+                    <div class="flow-badge">🔗</div>
+                    <div class="flow-content">
+                        <h4>Orchestrator</h4>
+                        <p>Coordinates steps, manages resource locks and sequencing. Routes all actions to Governor for evaluation.</p>
+                    </div>
+                </div>
+                <div class="flow-separator">↓</div>
+                <div class="flow-item">
+                    <div class="flow-badge">⚖️</div>
+                    <div class="flow-content">
+                        <h4>Governor</h4>
+                        <p>Evaluates signed policy-as-code. Issues APPROVE / BLOCK / ESCALATE. Produces immutable audit records.</p>
+                    </div>
+                </div>
+                <div class="flow-separator">↓</div>
+                <div class="flow-item">
+                    <div class="flow-badge">✅</div>
+                    <div class="flow-content">
+                        <h4>Decision & Execution</h4>
+                        <p>APPROVE → Execute action. BLOCK → No action. ESCALATE → Human review with full context.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEES SECTION -->
+    <section class="section-guarantees">
+        <div class="section-container">
+            <h2 class="section-title">Core Guarantees</h2>
+            <p class="section-subtitle">Three architectural commitments that enable government compliance.</p>
+            <div class="guarantees-grid">
+                <div class="guarantee-card">
+                    <div class="guarantee-header">
+                        <div class="guarantee-number">1</div>
+                        <h3 class="guarantee-title">Mandatory Policy Routing</h3>
+                    </div>
+                    <p class="guarantee-desc">Agents cannot reach execution systems without Orchestrator + Governor approval. Enforced at architecture level, not by convention.</p>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-header">
+                        <div class="guarantee-number">2</div>
+                        <h3 class="guarantee-title">Policy-as-Code</h3>
+                    </div>
+                    <p class="guarantee-desc">Rules are deterministic, versioned, and testable. Not prompt-based. Each decision includes policy version hash for reproducibility.</p>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-header">
+                        <div class="guarantee-number">3</div>
+                        <h3 class="guarantee-title">Immutable Audit & Replayability</h3>
+                    </div>
+                    <p class="guarantee-desc">Every decision recorded with inputs, rationale, and policy hash. System can re-execute policy to reproduce decision for forensic review.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USE CASES SECTION -->
+    <section class="section-usecases">
+        <div class="section-container">
+            <h2 class="section-title">Government Use Cases</h2>
+            <p class="section-subtitle">Real-world applications across procurement, data sharing, and mission operations.</p>
+            <div class="usecases-grid">
+                <div class="usecase-block">
+                    <div class="usecase-icon">🛍️</div>
+                    <h3 class="usecase-title">Procurement Automation</h3>
+                    <p class="usecase-desc">Enforce bidding rules, conflict-of-interest checks, pricing thresholds, and approval chains. No award executes without policy approval and rationale.</p>
+                    <ul class="usecase-list">
+                        <li>Real-time compliance verification</li>
+                        <li>Automatic escalation for policy violations</li>
+                        <li>Immutable decision trail for auditors</li>
+                    </ul>
+                </div>
+                <div class="usecase-block">
+                    <div class="usecase-icon">🔐</div>
+                    <h3 class="usecase-title">Inter-Agency Data Sharing</h3>
+                    <p class="usecase-desc">Gate access by clearance, purpose, and data sensitivity. Apply pseudonymization or format-preserving transforms automatically when required.</p>
+                    <ul class="usecase-list">
+                        <li>Access control by clearance level</li>
+                        <li>Minimum-necessary enforcement</li>
+                        <li>Automatic PII handling</li>
+                    </ul>
+                </div>
+                <div class="usecase-block">
+                    <div class="usecase-icon">🚀</div>
+                    <h3 class="usecase-title">Mission Orchestration</h3>
+                    <p class="usecase-desc">Coordinate multi-step operations with checkpoints, compensating transactions, and human-in-loop approvals for critical decisions.</p>
+                    <ul class="usecase-list">
+                        <li>Pause/resume workflows reliably</li>
+                        <li>Human sign-off at decision points</li>
+                        <li>Complete audit of operational timeline</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTROLS SECTION -->
+    <section class="section-controls">
+        <div class="section-container">
+            <h2 class="section-title">Security, Auditability & Sovereignty</h2>
+            <p class="section-subtitle">Enterprise-grade controls designed for government compliance and data protection.</p>
+            <div class="controls-grid">
+                <div class="control-card">
+                    <div class="control-icon">🔑</div>
+                    <h3 class="control-title">BYOK / HSM</h3>
+                    <p class="control-desc">Customer-managed keys for policy signing and audit sealing. Key operations under your control.</p>
+                </div>
+                <div class="control-card">
+                    <div class="control-icon">🔒</div>
+                    <h3 class="control-title">mTLS Service Auth</h3>
+                    <p class="control-desc">All service-to-service communication authenticated and encrypted with client certificates.</p>
+                </div>
+                <div class="control-card">
+                    <div class="control-icon">⛓️</div>
+                    <h3 class="control-title">WORM Audit Store</h3>
+                    <p class="control-desc">Append-only audit logs with cryptographic chaining. Tamper-evident design for forensic integrity.</p>
+                </div>
+                <div class="control-card">
+                    <div class="control-icon">🎯</div>
+                    <h3 class="control-title">Policy Versioning</h3>
+                    <p class="control-desc">Every policy change tracked, signed, and versioned. Deterministic replay for any past decision.</p>
+                </div>
+                <div class="control-card">
+                    <div class="control-icon">🌐</div>
+                    <h3 class="control-title">Deployment Options</h3>
+                    <p class="control-desc">Managed cloud (approved regions), on-premises, or air-gapped with signed package delivery.</p>
+                </div>
+                <div class="control-card">
+                    <div class="control-icon">🔗</div>
+                    <h3 class="control-title">Network Segmentation</h3>
+                    <p class="control-desc">Agents restricted to Orchestrator egress. Orchestrator gates access to Governor and execution layer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHECKLIST SECTION -->
+    <section class="section-checklist">
+        <div class="section-container">
+            <h2 class="section-title">Integration & Deployment Checklist</h2>
+            <p class="section-subtitle">High-level reference for security architects and infrastructure teams.</p>
+            <div class="checklist-container">
+                <div class="checklist-box">
+                    <div class="checklist-category">Identity & Access</div>
+                    <ul class="checklist-list">
+                        <li>SAML / OIDC SSO integration for user authentication</li>
+                        <li>SCIM provisioning for users and groups</li>
+                        <li>Role-based access control for policy authors, approvers, auditors</li>
+                    </ul>
+                </div>
+
+                <div class="checklist-box">
+                    <div class="checklist-category">Crypto & Key Management</div>
+                    <ul class="checklist-list">
+                        <li>Customer KMS/HSM integration (BYOK recommended)</li>
+                        <li>Certificate lifecycle and rotation for mTLS</li>
+                        <li>Signed policy packages for deployment verification</li>
+                    </ul>
+                </div>
+
+                <div class="checklist-box">
+                    <div class="checklist-category">Network & Deployment</div>
+                    <ul class="checklist-list">
+                        <li>Agents in restricted subnet: egress only to Orchestrator</li>
+                        <li>Orchestrator can reach Governor and execution systems only</li>
+                        <li>Private endpoints and firewall rules enforced</li>
+                        <li>Deployment model selected (cloud/on-prem/air-gapped)</li>
+                    </ul>
+                </div>
+
+                <div class="checklist-box">
+                    <div class="checklist-category">Operational & Monitoring</div>
+                    <ul class="checklist-list">
+                        <li>Shadow-mode policy staging (1–2 week validation period)</li>
+                        <li>Centralized logging to agency SIEM or collector</li>
+                        <li>CI/CD for policy updates: test → sign → staged deploy</li>
+                        <li>Incident response plan and security contact established</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="section-final-cta">
+        <div class="section-container">
+            <h2 class="section-title">Request Architecture Consultation</h2>
+            <p class="section-subtitle">1–2 week engagement with our security and architecture teams. Deliverables: threat model, prototype workflow, integration plan, hardening checklist.</p>
+            <div class="final-ctas">
+                <button class="btn btn--primary btn--lg">Schedule Consultation (NDA)</button>
+                <button class="btn btn--secondary btn--lg">Download Brief (Gated)</button>
+            </div>
+            <p style="font-size: var(--font-size-sm); margin-top: var(--space-24); opacity: 0.9;">Contact: <a href="mailto:security@axiosky.com" style="color: inherit; text-decoration: underline;">security@axiosky.com</a> for NDA and gated artifacts (threat model, pen-test summary, SBOM).</p>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">Platform</h3>
+                <ul class="footer-links">
+                    <li><a href="governor.html">Governance</a></li>
+                    <li><a href="orchestrator.html">Orchestration</a></li>
+                    <li><a href="policy-engine.html">Policy Engine</a></li>
+                    <li><a href="security.html">Security</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Solutions</h3>
+                <ul class="footer-links">
+                    <li><a href="../../pages/solutions/government.html">Government</a></li>
+                    <li><a href="../../pages/solutions/critical-infrastructure.html">Compliance-Critical Infrastructure</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Company</h3>
+                <ul class="footer-links">
+                    <li><a href="../../pages/company/about.html">About</a></li>
+                    <li><a href="../../pages/company/team.html">Team</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-social">
+            <a href="#" class="social-link" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.91 6.75H2.556l7.73-8.835L1.75 2.25h6.76l4.694 6.207 5.384-6.207zM17.002 18.807h1.844L6.844 3.556H4.897l12.105 15.251z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0-3.403 2.759-6.162 6.162-6.162s6.162 2.759 6.162 6.162-2.759 6.162-6.162 6.162-6.162-2.759-6.162-6.162zm2.889 0c0 1.861 1.512 3.373 3.373 3.373s3.373-1.512 3.373-3.373-1.512-3.373-3.373-3.373-3.373 1.512-3.373 3.373zm11.294-6.468c0 .795.645 1.44 1.44 1.44s1.44-.645 1.44-1.44-.645-1.44-1.44-1.44-1.44.645-1.44 1.44z"/></svg>
+            </a>
+            <a href="#" class="social-link" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+        </div>
+        
+        <div class="footer-legal">
+            <a href="../../pages/legal/privacy-policy.html">Privacy & Legal</a>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="footer-copyright">&copy; 2026 Axiosky</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/navigation.js"></script>
+</body>
+</html>
