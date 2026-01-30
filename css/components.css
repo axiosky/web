@@ -462,6 +462,9 @@
   font-size: var(--size-lg);
 }
 
+.proof-microcopy {
+  text-align: center;
+}
 /* ===== ENGAGEMENT FLOW ===== */
 
 .engagement-flow {
