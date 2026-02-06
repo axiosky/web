@@ -16,7 +16,6 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/components.css">
-    <link rel="stylesheet" href="../../css/pages.css">
     <link rel="stylesheet" href="../../css/responsive.css">
     <link rel="stylesheet" href="../../css/governor.css">
 
@@ -70,9 +69,9 @@
     </nav>
 
     <!-- HERO Section -->
-    <section class="hero governor-hero">
-        <div class="hero-content">
-            <div class="eyebrow">Runtime Enforcement Layer</div>
+    
+    <section class="governor-hero">
+        <div class="section-container">
             <h1 class="hero-headline">The Governor: Intercept, Evaluate, Enforce</h1>
             <h2 class="hero-subheadline">Real-time policy enforcement before agent actions reach production systems. Every decision deterministic. Every violation prevented. Every outcome auditable.</h2>
             <p class="hero-paragraph">The Governor is Axiosky's control plane—a runtime layer that sits between autonomous agents and your enterprise systems. It evaluates every proposed action against versioned, machine-enforceable policy before execution. Approvals happen in milliseconds. Violations are blocked automatically. Edge cases escalate to humans with full context. Nothing bypasses governance.</p>
@@ -88,7 +87,7 @@
                 </div>
                 <div class="feature-item">
                     <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/></svg>
-                    <span>60ms P50 latency</span>
+                    <span>Built for real-time operations</span>
                 </div>
                 <div class="feature-item">
                     <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/></svg>
@@ -97,10 +96,7 @@
             </div>
             
             <div class="hero-ctas">
-                <a href="../../pages/request-pilot.html" class="btn btn-primary">Request Technical Deep-Dive</a>
-                <a href="#" class="btn btn-secondary">Download Architecture Diagram</a>
-            </div>
-            <p class="hero-microcopy">Pilot slots limited. Priority government & regulated enterprises.</p>
+                <a href="../../pages/request-pilot.html" class="btn btn--primary btn--lg">Request Technical Deep-Dive</a>
         </div>
     </section>
 
@@ -191,8 +187,7 @@
                 </div>
             </div>
             
-            <p class="section-italic-note">Governance is not observability. Governance is control.</p>
-        </div>
+           </div>
     </section>
 
     <!-- How Governor Works Section -->
@@ -205,7 +200,7 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h3>Interception (5ms)</h3>
+                        <h3>Interception</h3>
                         <p>Agent proposes action. Orchestrator routes proposal to Governor before execution. Action is suspended in queue.</p>
                     </div>
                 </div>
@@ -215,7 +210,7 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>Context Assembly (15ms)</h3>
+                        <h3>Context Assembly</h3>
                         <p>Governor retrieves agent identity, user authorization, data classification, policy version, historical decisions, system state.</p>
                     </div>
                 </div>
@@ -225,7 +220,7 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h3>Policy Evaluation (30ms)</h3>
+                        <h3>Policy Evaluation</h3>
                         <p>Policy Engine executes versioned ruleset. Deterministic logic produces decision: APPROVE, BLOCK, or ESCALATE.</p>
                     </div>
                 </div>
@@ -235,16 +230,10 @@
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <h3>Enforcement & Audit (10ms)</h3>
+                        <h3>Enforcement & Audit</h3>
                         <p>Decision enforced. Every decision logged immutably with timestamp, agent ID, policy version, rule outcomes, decision rationale.</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="latency-box">
-                <p class="latency-label">End-to-End Governance Overhead</p>
-                <p class="latency-value">60ms</p>
-                <p class="latency-note">Fast enough for real-time operations. Slow enough to be deterministic and auditable.</p>
             </div>
         </div>
     </section>
@@ -271,19 +260,54 @@ user_context: FinanceManager-SarahChen</code>
                 
                 <div class="scenario-step">
                     <h3 class="scenario-title">Governor Intercepts</h3>
-                    <p><strong>DECISION:</strong> ESCALATE</p>
-                    <p><strong>REASON:</strong> Dual authorization required (Rule 2 violation)</p>
-                    <p><strong>ESCALATION ROUTE:</strong> CFO approval queue</p>
-                    <p><strong>CONTEXT PROVIDED:</strong> Original proposal, user authorization, vendor details, recent transaction history</p>
+                    <div class="scenario-code">
+                        <code>Action queued at 2025-01-15T14:32:18.442Z<br>Retrieving: User authorization, vendor status, approval matrix, transaction history<br>
+Loading: Financial Controls v2.3.1<br>
+<br>Executing ruleset...</br>
+<br>Policy Evaluation</br>
+<br>Rule 1: Amount Threshold Check</br>
+<br>✓ PASS — $475K is under $500K single-transaction limit for Finance Manager role</br>
+
+<br>Rule 2: Dual Authorization Requirement</br>
+<br>✗ FAIL — Transfers >$250K require CFO approval. Current user is Finance Manager.</br>
+
+<br>Rule 3: Vendor Verification</br>
+<br>✓ PASS — Vendor_ID_8472 is active, verified, and has valid banking details</br>
+
+<br>Rule 4: Rate Limiting</br>
+<br>✓ PASS — User has not exceeded daily transaction count (3/10)</br>
+
+<br>Rule 5: Sanctions Screening</br>
+<br>✓ PASS — Recipient not on OFAC or sanctions lists</br>
+
+<br>Decision Output:</br>
+
+<br>DECISION: ESCALATE</br>
+<br>REASON: Dual authorization required (Rule 2 violation)</br>
+<br>ESCALATION_ROUTE: CFO_approval_queue</br>
+
+<br>CONTEXT_PROVIDED:</br>
+<br>- Original agent proposal</br>
+<br>- User attempting action</br>
+<br>- Policy rule triggered</br>
+<br>- Vendor details</br>
+<br>- Recent transaction history</br>
+
+<br>AWAITING: Human approval or rejection</br>
+
+CONTEXT PROVIDED: Original proposal, user authorization, vendor details, recent transaction history</code>
+                    </div>
                 </div>
                 
                 <div class="scenario-divider">↓</div>
                 
                 <div class="scenario-step">
                     <h3 class="scenario-title">Human Review</h3>
-                    <p><strong>CFO Dashboard:</strong> Wire Transfer $475,000 to VendorID8472</p>
-                    <p>Requested by Finance Manager Sarah Chen | Q4 supplier payment per contract</p>
-                    <p>Vendor has 12 successful prior payments</p>
+                    <div class="scenario-code">
+                        <code>CFO Dashboard: Wire Transfer $475,000 to VendorID8472<br>
+RRequested by Finance Manager Sarah Chen | Q4 supplier payment per contract<br>
+Vendor has 12 successful prior payments</code>
+                    </div>
                     <p class="scenario-action">[APPROVE] [REJECT] [MODIFY]</p>
                 </div>
                 
@@ -310,7 +334,7 @@ execution_status: COMPLETED</code>
                 <h3>What this demonstrates:</h3>
                 <ul class="takeaway-list">
                     <li>Agent proposed action was suspended, not executed</li>
-                    <li>Policy evaluation happened in 60ms</li>
+                    <li>Policy evaluation completed in real-time</li>
                     <li>Violation was caught before money moved</li>
                     <li>Human received full context for informed decision</li>
                     <li>Every step is recorded immutably</li>
@@ -332,16 +356,16 @@ execution_status: COMPLETED</code>
                     <p class="tech-desc">Policy evaluation is pure computation. Identical action context = identical decision, every execution.</p>
                 </div>
                 <div class="tech-card">
-                    <h3 class="tech-title">Millisecond Latency</h3>
-                    <p class="tech-desc">Governance overhead averages 60ms. P99 latency 120ms. Does not create user-perceptible delays.</p>
+                    <h3 class="tech-title">Real-Time Architecture</h3>
+                    <p class="tech-desc">Designed for sub-second governance overhead. Optimized pipeline from interception to enforcement creates no user-perceptible delays.</p>
                 </div>
                 <div class="tech-card">
                     <h3 class="tech-title">Multi-Tenancy Isolation</h3>
                     <p class="tech-desc">Each organization's policies and audit logs are cryptographically isolated. No cross-tenant leakage.</p>
                 </div>
                 <div class="tech-card">
-                    <h3 class="tech-title">High Availability</h3>
-                    <p class="tech-desc">99.99% uptime SLA. Active-active deployment. Automatic failover. Governance never becomes a bottleneck.</p>
+                    <h3 class="tech-title">High Availability Design</h3>
+                    <p class="tech-desc">Built for resilience with active-active deployment patterns, automatic failover, and distributed architecture to ensure governance reliability.</p>
                 </div>
                 <div class="tech-card">
                     <h3 class="tech-title">Policy Version Control</h3>
@@ -362,23 +386,23 @@ execution_status: COMPLETED</code>
             <p class="section-subtitle">The Governor integrates at the orchestration layer between agent frameworks and execution environments. No agent code changes required.</p>
             
             <div class="integration-diagram">
-                <div class="integration-box">
-                    <h4>Your Agent Layer</h4>
+                <div class="integration-box governor-box">
+                    <h3>Your Agent Layer</h3>
                     <p>LangChain, AutoGPT, Custom Agents</p>
                 </div>
                 <div class="integration-arrow">↓</div>
                 <div class="integration-box governor-box">
-                    <h4>Axiosky Orchestrator</h4>
+                    <h3>Axiosky Orchestrator</h3>
                     <p>Action Proposals Intercepted Here</p>
                 </div>
                 <div class="integration-arrow">↓</div>
-                <div class="integration-box">
-                    <h4>Governor</h4>
+                <div class="integration-box governor-box">
+                    <h3>Governor</h3>
                     <p>Policy Enforcement Layer</p>
                 </div>
                 <div class="integration-arrow">↓</div>
-                <div class="integration-box">
-                    <h4>Your Execution Layer</h4>
+                <div class="integration-box governor-box">
+                    <h3>Your Execution Layer</h3>
                     <p>Enterprise APIs, Databases, Cloud Systems</p>
                 </div>
             </div>
@@ -393,7 +417,7 @@ execution_status: COMPLETED</code>
             <div class="faq-grid">
                 <div class="faq-item">
                     <h3 class="faq-question">Won't governance slow down our agents?</h3>
-                    <p class="faq-answer">Governor is designed for minimal overhead. Most agent latency comes from LLM inference and external API calls, not decision evaluation. Governance averages 60ms P50. For latency-sensitive workloads, Governor supports pre-evaluated decision paths and cached approvals.</p>
+                    <p class="faq-answer">Governor is architected for minimal overhead. Most agent latency comes from LLM inference and external API calls, not decision evaluation. The deterministic pipeline is designed to operate in real-time without creating perceptible delays. For latency-sensitive workloads, Governor supports pre-evaluated decision paths and cached approvals.</p>
                 </div>
                 
                 <div class="faq-item">
@@ -431,33 +455,7 @@ execution_status: COMPLETED</code>
             <p class="section-subtitle">Start with a technical deep-dive. Our engineers will map your workflows, prototype policy enforcement, and demonstrate auditable outcomes.</p>
             
             <div class="final-ctas">
-                <a href="../../pages/request-pilot.html" class="btn btn-primary">Request Technical Discussion</a>
-                <a href="#" class="btn btn-secondary">Download Governor Architecture Guide</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Related Pages Section -->
-    <section class="section-related">
-        <div class="section-container">
-            <h2 class="section-title">Explore the Platform</h2>
-            
-            <div class="related-grid">
-                <a href="policy-engine.html" class="related-card">
-                    <h3>Policy Engine</h3>
-                    <p>Turn regulations into versioned, testable code</p>
-                    <span class="related-link">Learn more →</span>
-                </a>
-                <a href="orchestrator.html" class="related-card">
-                    <h3>Orchestrator</h3>
-                    <p>Coordinate multi-agent workforces under governance</p>
-                    <span class="related-link">Learn more →</span>
-                </a>
-                <a href="security.html" class="related-card">
-                    <h3>Security</h3>
-                    <p>Enterprise-grade security controls and compliance</p>
-                    <span class="related-link">Learn more →</span>
-                </a>
+                <a href="../../pages/request-pilot.html" class="btn btn--primary btn--lg">Request Technical Discussion</a>
             </div>
         </div>
     </section>
@@ -506,7 +504,7 @@ execution_status: COMPLETED</code>
         </div>
         
         <div class="footer-legal">
-            <a href="../../pages/legal/privacy-policy.html">Privacy & Legal</a>
+            <a href="../../pages/legal/privacy.html">Privacy & Legal</a>
         </div>
         
         <div class="footer-bottom">
